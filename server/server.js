@@ -22,3 +22,11 @@ server.listen(8080, () =>{
     });
 });
 
+io.on('connection', (socket) => {
+    counter++;
+    console.log(counter+' someone connected');
+    socket.on('sendToMe', (message) =>{
+        socket.emit("displayMessage", (message));
+    });
+});
+

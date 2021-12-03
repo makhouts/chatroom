@@ -1,0 +1,136 @@
+body {
+	padding: 0;
+	margin: 0;
+	background: -moz-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+	background: -webkit-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 100px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(25,147,147,0.1);
+}
+ 
+::-webkit-scrollbar-thumb {
+     border-radius: 10px;
+    background-color: rgba(25,147,147,0.2);
+}
+
+.chat-thread {
+	margin: 24px auto 0 auto;
+	padding: 5px 500px;
+	list-style: none;
+	overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.chat-thread li {
+	position: relative;
+	clear: both;
+	display: inline-block;
+	padding: 16px 40px 16px 20px;
+	margin: 0 0 20px 0;
+	font: 16px/20px 'Noto Sans', sans-serif;
+	border-radius: 10px;
+	background-color: rgba(25,147,147,0.2);
+}
+
+.chat-thread li:nth-child(odd) {
+	animation: 0.15s 1 ease-in;
+	-moz-animation: 0.15s 1 ease-in;
+	-webkit-animation: 0.15s 1 ease-in;
+	float: right;
+	margin-right: 50px;
+	color: #0AD5C1;
+}
+
+.chat-thread li:nth-child(odd):after {
+	border-right: 50px solid transparent;
+	right:  50px;
+}
+
+.chat-thread li:nth-child(even) {
+	animation: 0.15s 1 ease-in;
+	-moz-animation: 0.15s 1 ease-in;
+	-webkit-animation: 0.15s 1 ease-in;
+	float: left;
+	margin-left: 50px;
+	color: #0EC879;
+}
+
+.chat-thread li:nth-child(odd):after {
+	border-right: 50px solid transparent;
+	left:  50px;
+}
+
+.chat-thread li:before {
+	position: absolute;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	content: '';
+}
+
+input {
+	width: 100%;
+	height: 48px;
+	font: 32px/48px 'Noto Sans', sans-serif;
+	background: none;
+	color: #0AD5C1;
+	border: 0;
+	border-bottom: 1px solid rgba(25,147,147,0.2);
+	outline: none;
+}
+
+.chat-window {
+	position: fixed;
+	bottom: 18px;
+}
+
+button {
+	background: none;
+	border: 2px solid;
+	font: inherit;
+	line-height: 1;
+	margin: 0.5em;
+	padding: 1em 2em;
+	color: white;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.self {
+	border: 3px solid rgb(248, 58, 58);
+}
+
+.chat-thread li:nth-child(even):before {
+	left: -60px;
+	background-size: cover;
+	background-image: url('https://icons.iconarchive.com/icons/icons-land/vista-people/256/Office-Customer-Male-Light-icon.png');
+}
+
+.chat-thread li:nth-child(odd):before {
+	left: -60px;
+	background-image: url('https://meldyceramika.com/wp-content/uploads/2013/07/User-Avatar-Transparent.png');
+	background-size: cover;
+}
+
+.guests {
+	width: 100%;
+	min-height: 30px;
+	border-radius: 10px;
+	border: 2px solid rgba(245, 70, 70, 0.575);
+	color: white;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	/* background-image: url("./dot.png"); */
+	background-size: 10px;	
+	background-repeat: no-repeat;
+	background-position-x: 0px;
+	text-align: center;
+}
